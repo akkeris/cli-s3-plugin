@@ -1,0 +1,27 @@
+{
+  "name": "cli-s3-plugin",
+  "version": "0.1.0",
+  "description": "s3 CLI plugin for Akkeris apps",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akkeris/cli-s3-plugin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akkeris/cli-s3-plugin/issues"
+  },
+  "homepage": "https://github.com/akkeris/cli-s3-plugin#readme",
+  "dependencies": {
+   
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.3"
+  }
+}
