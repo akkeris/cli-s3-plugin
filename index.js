@@ -32,7 +32,7 @@ module.exports = {
     }
 
     appkit.args
-      .command('s3:credentials', 'rotate credentials', require_options, cred_rotate.bind(null, appkit))
+      .command('s3:rotate', 'rotate credentials', require_options, cred_rotate.bind(null, appkit))
   },
   update:function() {},
   'group':'s3',
