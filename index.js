@@ -1,5 +1,5 @@
 const assert = require('assert')
-const common = require('lib/common')
+const common = require('./lib/common')
 
 async function cred_rotate (appkit, args) {
   try {
