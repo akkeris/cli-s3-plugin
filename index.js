@@ -4,8 +4,13 @@ async function cred_rotate (appkit, args) {
   try {
     let s3 = await common.find(appkit, args.app, args.bucket)
     let data = null
+    let values = {}
+    values["IAM_ROTATE_DATE"] = Date.now()
     if (s3.addon_service.name === 'akkeris-s3') {
       data = await appkit.api.put(null, `/apps/${args.app}/addons/${s3.id}/actions/credentials`)
+      await appkit.api.patch(null, `/apps/${args.app}/config_vars`)
+    } else {
+      throw new Error(`The ${s3.plan.name} is not a valid s3 addon.`)
     }
     delete data.Plan
     appkit.terminal.vtable(data)
